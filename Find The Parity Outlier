@@ -1,0 +1,29 @@
+let a = [2, 4, 0, 100, 4, 11, 2602, 36]
+let b = [160, 3, 1719, 19, 11, 13, -21]
+
+function findOutlier(integers){
+    let counterOdd = 0
+    let counterEven = 0
+    let thisNumber = 0
+    let thisNumber1 = 0
+
+    integers.forEach(element => {
+        if (element % 2 !== 0) {
+            counterEven++
+            thisNumber = element
+        } else {
+            counterOdd++
+            thisNumber1 = element
+        }
+    });
+
+    if (counterEven > counterOdd) {
+        return thisNumber1
+    } else {
+        return thisNumber
+    }
+  }
+
+  let done = findOutlier(b)
+
+  console.log(done)
