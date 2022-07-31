@@ -1,0 +1,12 @@
+function solution(str){
+  let myArr = []
+  for (i = 0; i < str.length; i++) {
+    myArr.push(str[i])
+  }
+  myArr = myArr.reverse()
+  return str = myArr.join('')
+}
+
+function solution(str){
+  return str.split('').reverse().join('');  
+}
